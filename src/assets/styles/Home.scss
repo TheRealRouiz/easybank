@@ -1,0 +1,280 @@
+.home-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: space-evenly;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 3rem 0 0 0;
+
+    .sec-1 {
+        display: flex;
+        justify-content: center;
+        align-items: space-evenly;
+        flex-direction: row;
+        margin: 0 0 0 3rem;
+        overflow: hidden;
+
+        .left-col {
+            width: 45vw;
+
+            .text-container {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 2rem;
+                text-justify: inter-ideograph;
+                margin: 7rem 0 0 3rem;
+                width: 80%;
+                flex-wrap: wrap;
+
+                button {
+                    width: 20rem;
+                }
+            }
+        }
+
+        .right-col {
+            width: 55vw;
+            overflow: hidden;
+
+            .img1 {
+                overflow: hidden;
+                width: 60rem;
+                height: 100%;
+                object-fit: contain;
+
+            }
+
+            .img2 {
+                overflow: hidden;
+                position: absolute;
+                top: 30%;
+                left: 55%;
+                width: 45rem;
+            }
+        }
+    }
+
+    .sec-2 {
+        min-height: 30rem;
+        background-color: rgb(237, 241, 250);
+        gap: 2rem;
+
+        .upper-div {
+            display: flex;
+            justify-content: center;
+            align-items: space-evenly;
+            flex-direction: column;
+            margin: 2rem 3rem 3rem 5rem;
+            gap: 1rem;
+            width: 40rem;
+            flex-wrap: wrap;
+            margin: 2rem 2rem 2rem 2rem;
+            .h3, .subtitle2 {
+                text-align: center;
+                margin: 2rem 2rem 2rem 2rem;
+            }
+        }
+
+        .lower-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            .pros-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 25%;
+                gap: 1rem;
+                margin: 0rem 0rem 1.5rem 0rem;
+
+                .inner-text {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 10rem;
+                    justify-content: stretch;
+                    text-align: left;
+                    gap: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .sec-3 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+
+        .blog-grid {
+            margin: 3rem 0 3rem 0;
+            display: flex;
+            flex-wrap: wrap;
+
+            .blog {
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 2rem;
+                overflow: hidden;
+                border-radius: 5px;
+                text-align: justify;
+                object-fit: contain;
+                padding: 0 0 1rem 0;
+
+                Typography {
+                    margin: 3rem 0 0 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+    @media (max-width: 1000px) {
+        .sec-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin: 0 0 2rem 3rem;
+            overflow: hidden;
+
+            .right-col {
+                display: none;
+            }
+
+            .left-col {
+                width: 90%;
+            }
+        }
+
+    }
+
+    @media (max-width: 800px) {
+        .sec-2 {
+            .upper-div {
+                display: flex;
+                justify-content: center;
+                align-items: space-evenly;
+                flex-direction: column;
+                margin: 2rem 3rem 3rem 5rem;
+                gap: 1rem;
+                width: 40rem;
+                h3, .subtitle2 {
+                    margin: 2rem 2rem 2rem 2rem;
+                }
+            }
+
+            .lower-div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 70vw;
+                gap: 2rem;
+                margin-bottom: 2rem;
+
+                .pros-list {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    width: 100%;
+
+                    .inner-text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        width: 30vw;
+                        justify-content: stretch;
+                        text-align: center;
+                        gap: 0.5rem;
+                        font-size: 40px;
+                        text-align: justify;
+                        text-justify: inter-word;
+                    }
+                }
+            }
+        }
+
+        .sec-3 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            .blog-grid {
+                margin: 3rem 0 3rem 0;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                width: 70vw;
+
+                .paper {
+                    width: 70vw;
+                }
+
+                .blog {
+                    width: 70vw;
+                    box-sizing: border-box;
+                    margin-bottom: 2rem;
+                    overflow: hidden;
+                    border-radius: 5px;
+                    text-align: justify;
+                    object-fit: contain;
+                    padding: 0 0 1rem 0;
+                    
+
+                    Typography {
+                        margin: 3rem 0 0 0;
+                    }
+
+                    img {
+                        width: 100%;
+                        /* Stretch the image to fill the entire width of the parent div */
+                        height: 100%;
+                        /* Stretch the image to fill the entire height of the parent div */
+                        object-fit: cover;
+                        /* Maintain aspect ratio while covering the entire container */
+                        display: block;
+                    }
+                }
+            }
+        }
+
+
+        @media (max-width: 1000px) {
+            .sec-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin: 0 0 2rem 3rem;
+                overflow: hidden;
+
+                .right-col {
+                    display: none;
+                }
+
+                .left-col {
+                    width: 90%;
+                }
+            }
+
+        }
+
+    }
+
+}
